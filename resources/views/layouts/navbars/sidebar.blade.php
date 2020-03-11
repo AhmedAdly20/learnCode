@@ -142,7 +142,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('videos.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Videos') }}
                     </a>
                 </li>

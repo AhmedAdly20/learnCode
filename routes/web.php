@@ -38,7 +38,9 @@ Route::group(['middleware' => ['auth','admin'] ], function () {
 
     Route::resource('admin/tracks', 'Admin\TrackController');
 
-	Route::resource('admin/courses', 'Admin\CourseController');
+    Route::resource('admin/courses', 'Admin\CourseController');
+
+	Route::resource('admin/videos', 'Admin\VideoController');
 
 	Route::get('admin/profile', ['as' => 'profile.edit', 'uses' => 'Admin\ProfileController@edit']);
 
