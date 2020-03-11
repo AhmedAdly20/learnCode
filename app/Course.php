@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    protected $fillable = ['title','status','link'];
+    protected $fillable = ['title','status','link','track_id'];
 
     public function photo(){
         return $this->morphOne('App\Photo','photoable');
