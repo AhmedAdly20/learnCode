@@ -147,12 +147,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('quizzes.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Quizzes') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('questions.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Questions') }}
                     </a>
                 </li>
