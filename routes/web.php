@@ -38,11 +38,19 @@ Route::group(['middleware' => ['auth','admin'] ], function () {
 
     Route::resource('admin/tracks', 'Admin\TrackController');
 
+    Route::resource('admin/tracks.courses', 'Admin\TrackCourseController');
+
     Route::resource('admin/courses', 'Admin\CourseController');
+
+    Route::resource('admin/courses.videos', 'Admin\CourseVideoController');
+
+    Route::resource('admin/courses.quizzes', 'Admin\CourseQuizController');
 
     Route::resource('admin/videos', 'Admin\VideoController');
 
     Route::resource('admin/quizzes', 'Admin\QuizController');
+
+    Route::resource('admin/quizzes.questions', 'Admin\QuizQuestionController');
 
 	Route::resource('admin/questions', 'Admin\QuestionController');
 

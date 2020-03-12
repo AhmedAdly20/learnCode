@@ -77,9 +77,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Course $course)
     {
-        //
+        return view('admin.courses.show',compact('course'));
     }
 
     /**
@@ -104,7 +104,7 @@ class CourseController extends Controller
     {
 
         $rules = [
-            'title' => 'required|min:20|max:150',
+            'title' => 'required|min:10|max:150',
             'status' => 'required|integer|in:0,1',
             'link' => 'required|url',
             'track_id' => 'required|integer',
@@ -154,9 +154,9 @@ class CourseController extends Controller
         if($course->photo) {
             $filename = $course->photo->filename;
             unlink('images/'.$filename);
+            // delete course photo
+            $course->photo->delete();
         }
-        // delete course photo
-        $course->photo->delete();
 
         $course->delete();
         return redirect('/admin/courses')->withStatus('Course successfully deleted.');

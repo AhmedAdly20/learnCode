@@ -60,9 +60,9 @@ class VideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Video $video)
     {
-        //
+        return view('admin.videos.show',compact('video'));
     }
 
     /**

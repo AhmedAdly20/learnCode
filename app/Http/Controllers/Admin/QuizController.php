@@ -59,9 +59,9 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Quiz $quiz)
     {
-        //
+        return view('admin.quizzes.show',compact('quiz'));
     }
 
     /**

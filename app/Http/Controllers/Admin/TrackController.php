@@ -58,7 +58,7 @@ class TrackController extends Controller
      */
     public function show(Track $track)
     {
-        // return view('admin.tracks.show', compact('track'));
+        return view('admin.tracks.show',compact('track'));
     }
 
     /**
