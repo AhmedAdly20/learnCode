@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/courses/{slug}','CourseController@index');
 
 // Admin Routes
 
