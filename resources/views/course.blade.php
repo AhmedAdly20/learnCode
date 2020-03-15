@@ -60,7 +60,7 @@
 				<div class="alert alert-default">Enrolled</div>
 
 			@else
-				<form method="POST" action="/courses/{{$course->slug}}">
+				<form method="post" action="/courses/{{ $course->slug }}">/
 					@csrf
 					<input type="submit" value="Enroll" name="enroll" class="btn btn-default btn-enroll">
 				</form>
