@@ -29,6 +29,8 @@ Route::post('/courses/{slug}/quizzes/{name}','QuizController@submit');
 
 Route::get('/search','SearchController@index');
 
+Route::get('/tracks/{name}','TrackController@index');
+
 // Admin Routes
 
 Route::group(['middleware' => ['auth','admin'] ], function () {
